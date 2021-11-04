@@ -1,0 +1,140 @@
+.device-container {
+  padding: 0 30%;
+  .search-container {
+    padding: 5px 10px;
+    background: #d3d3d378;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6B9DD0;
+    font-size: 16px;
+    margin-bottom: 15px;
+    .search-box {
+      background: white;
+      padding: 5px 10px;
+      width: 80%;
+      display: flex;
+      i {
+        padding: 0 5px;
+        color: lightgray;
+      }
+      input {
+        border: none !important;
+        color: #6B9DD0;
+        width: 100%;
+        &:focus-visible {
+          outline: none !important;
+        }
+      }
+    }
+    .cancel-button {
+      cursor: pointer;
+      font-size: bold;
+    }
+  }
+
+  .device-list-container {
+    .single-device {
+      background: #E9EAF6;
+      display: flex;
+      padding: 10px;
+      margin: 10px 0;
+      align-items: center;
+      .device-image {
+        display: flex;
+        flex-basis: 20%;
+        align-items: center;
+        justify-content: center;
+        i {
+          &.fa.fa-mobile {
+            font-size: 45px;
+          }
+
+          &.fa.fa-tablet {
+            font-size: 35px;
+          }
+
+          &.fa.fa-desktop {
+            font-size: 25px;
+          }
+        }
+      }
+      .device-details {
+        flex-basis: 70%;
+        .device-details-title {
+
+        }
+      }
+      .more-info {
+        display: flex;
+        flex-basis: 10%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .graph-container {
+    display: flex;
+    .left-graph {
+      display: flex;
+      flex-basis: 50%;
+      flex-direction: column;
+      .device-title {
+        margin: 5px 0;
+        background: #E9EAF6;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+      }
+      .device-tabs {
+        .device-tab {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          background: #E9EAF6;
+          margin: 5px 0;
+          padding: 6px 0;
+          .device-icon {
+            padding: 0 10px;
+            i {
+              &.fa.fa-mobile {
+                font-size: 45px;
+              }
+
+              &.fa.fa-tablet {
+                font-size: 35px;
+              }
+
+              &.fa.fa-desktop {
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-graph {
+      border: 1px solid lightgray;
+      margin: 5px;
+      flex-basis: 50%;
+      .device-details-title {
+        padding: 10px;
+        font-weight: bold;
+        background: #E9EAF6;
+      }
+      .device-graph-container {
+        .graph-details {
+          div {
+            padding: 5px 10px;
+          }
+        }
+        .device-graph {}
+      }
+    }
+  }
+}

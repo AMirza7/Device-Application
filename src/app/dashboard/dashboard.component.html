@@ -1,0 +1,59 @@
+<div class="device-container">
+  <div class="search-container">
+    <div class="search-box">
+      <i class="fa fa-search"></i>
+      <input  [ngModel]="searchKey" (ngModelChange)="onSearch($event)" type="text"/>
+    </div>
+    <div (click)="onCancel()" class="cancel-button">
+      Cancel
+    </div>
+  </div>
+  <div *ngIf="!isShowingDetails" class="device-list-container">
+    <div *ngFor="let device of filteredDevices" class="single-device">
+      <div class="device-image">
+        <i *ngIf="device?.type === 'mobile'" class="fa fa-mobile"></i>
+        <i  *ngIf="device?.type === 'ipad'" class="fa fa-tablet"></i>
+        <i *ngIf="device?.type === 'desktop'" class="fa fa-desktop"></i>
+      </div>
+      <div class="device-details">
+        <div class="device-title">{{device?.deviceName}}</div>
+        <div class="device-status">Status: {{device?.status}}</div>
+      </div>
+      <div class="more-info">
+        <i (click)="onShowDetails(device)" class="fa fa-info-circle"></i>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="isShowingDetails" class="graph-container">
+    <div class="left-graph">
+      <div class="device-title">
+        Related Devices
+      </div>
+      <div class="device-tabs">
+        <div *ngFor="let device of relatedDevices" class="device-tab">
+          <div class="device-icon">
+            <i *ngIf="device?.type === 'mobile'" class="fa fa-mobile"></i>
+            <i  *ngIf="device?.type === 'ipad'" class="fa fa-tablet"></i>
+            <i *ngIf="device?.type === 'desktop'" class="fa fa-desktop"></i>
+          </div>
+          <div class="device-details">
+            <div class="device-details-title">{{device?.deviceName}}</div>
+            <div class="device-status">Status: {{device?.status}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-graph">
+      <div class="device-details-title"> Details: {{selectedDevice?.deviceName}}</div>
+      <div class="device-graph-container">
+        <div class="graph-details">
+          <div>Status : {{selectedDevice.status}}</div>
+          <div>Temperature : {{selectedDevice?.temperature }}</div>
+          <div>Usage</div>
+          <img src="../../assets/graphs.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+[
+  {
+    "deviceName": "device 1",
+    "status" : "Available",
+    "type": "mobile",
+    "temperature": "10 Celsius"
+  },
+  {
+    "deviceName": "device 2",
+    "status" : "Offline",
+    "type": "ipad",
+    "temperature": "20 Celsius"
+  },
+  {
+    "deviceName": "device 3",
+    "status" : "Available",
+    "type": "desktop",
+    "temperature": "11 Celsius"
+  },
+  {
+    "deviceName": "device 4",
+    "status" : "Available",
+    "type": "mobile",
+    "temperature": "15 Celsius"
+  }
+]
